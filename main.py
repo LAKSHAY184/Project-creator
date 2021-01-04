@@ -3,7 +3,7 @@ import time
 import os
 import win32clipboard
 project_name=input('your project name:  ') 
-os.mkdir(f'F:\\{project_name}')
+os.mkdir(f'D:\\{project_name}')
 uname='Github username'
 pwd='Github Password'
 driver=webdriver.Chrome()
