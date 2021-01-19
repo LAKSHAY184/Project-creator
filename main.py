@@ -4,18 +4,18 @@ import os
 import win32clipboard
 project_name=input('your project name:  ') 
 os.mkdir(f'D:\\{project_name}')
-uname='Github username'
-pwd='Github Password'
+uname='Lakshay184'
+pwd='Lakshay110053'
 driver=webdriver.Chrome()
 driver.get('https://github.com')
 login_btn=driver.find_element_by_xpath('/html/body/div[1]/header/div/div[2]/div[2]/a[1]')
 login_btn.click()
 time.sleep(1)
-username=driver.find_element_by_xpath('/html/body/div[3]/main/div/form/div[4]/input[1]')
+username= driver.find_element_by_xpath('/html/body/div[3]/main/div/div[4]/form/input[2]')
 username.send_keys(uname)
-password=driver.find_element_by_xpath('/html/body/div[3]/main/div/form/div[4]/input[2]')
+password=driver.find_element_by_xpath('/html/body/div[3]/main/div/div[4]/form/input[3]')
 password.send_keys(pwd)
-finallogin=driver.find_element_by_xpath('/html/body/div[3]/main/div/form/div[4]/input[12]')
+finallogin=driver.find_element_by_xpath('/html/body/div[3]/main/div/div[4]/form/input[14]')
 finallogin.click()
 newrepobtn=driver.find_element_by_xpath('/html/body/div[4]/div/aside[1]/div[2]/div[2]/div/h2/a')
 newrepobtn.click()
@@ -32,7 +32,7 @@ data = win32clipboard.GetClipboardData()
 win32clipboard.CloseClipboard()
 #print (data)
 proj='#'+project_name
-os.chdir(f"f:\\{project_name}")
+os.chdir(f"D:\\{project_name}")
 os.system(f'echo {project_name} >> README.md')
 os.system('git init')
 os.system('git add README.md')
