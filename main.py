@@ -4,8 +4,8 @@ import os
 import win32clipboard
 project_name=input('your project name:  ') 
 os.mkdir(f'D:\\{project_name}')
-uname='Lakshay184'
-pwd='Lakshay110053'
+uname=''
+pwd=''
 driver=webdriver.Chrome()
 driver.get('https://github.com')
 login_btn=driver.find_element_by_xpath('/html/body/div[1]/header/div/div[2]/div[2]/a[1]')
